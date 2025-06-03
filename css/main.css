@@ -1,0 +1,235 @@
+:root {
+  --color-white: #ffffff;
+
+  --color-hero-bg: #ffffff;
+  --color-hero-primary-bg-menu: #3a3054;
+  --color-hero-btn: #2bd0d0;
+  --color-hero-primary-text: #34313d;
+  --color-hero-description: #9e9aa8;
+  --color-hero-error: #f46363;
+
+  --color-statistics-bg: #eff1f7;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hero {
+  background-color: var(--color-hero-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px;
+  padding-bottom: 168px;
+  gap: 64px;
+  position: relative;
+
+  background-image: url(../assets/cloud.svg);
+  background-position-y: 96px;
+  background-position-x: 75px;
+  background-size: 460px;
+  background-repeat: no-repeat;
+}
+
+.hero-btn {
+  background-color: var(--color-hero-btn);
+  border-radius: 32px;
+  color: var(--color-white);
+  border: none;
+  outline: none;
+}
+
+.hero-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.hero-header-nav {
+  display: none;
+
+  position: absolute;
+  top: calc(100% + 24px);
+  width: 100%;
+
+  padding: 40px 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--color-hero-primary-bg-menu);
+  border-radius: 10px;
+}
+
+.hero-header-nav--active {
+  display: flex;
+}
+
+.hero-header-nav-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+}
+
+.hero-header-nav-links {
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: #9e9aa8 solid 1px;
+}
+
+.hero-header-link {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: var(--color-white);
+}
+
+.hero-header-btn {
+  padding: 12px;
+  width: 100%;
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.hero-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.hero-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.hero-main-title {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 48px;
+  letter-spacing: -1.05px;
+  text-align: center;
+
+  color: var(--color-hero-primary-text);
+}
+
+.hero-main-description {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.12px;
+  text-align: center;
+
+  color: var(--color-hero-description);
+}
+
+.hero-main-btn {
+  padding: 12px 40px;
+
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.hero-form {
+  background-color: var(--color-hero-primary-bg-menu);
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% - 80px);
+}
+
+.hero-form-input {
+  padding: 16px;
+
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+
+  outline: none;
+  border: none;
+  border-radius: 5px;
+
+  color: var(--color-hero-primary-text);
+}
+
+.hero-form-input::placeholder {
+  color: color-mix(in srgb, var(--color-hero-primary-text) 50%, transparent);
+}
+
+.hero-form-input-error {
+  display: none;
+
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 12px;
+
+  color: var(--color-hero-error);
+}
+
+.hero-form-input-error-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-form-input-error-wrapper.error {
+  .hero-form-input {
+    box-shadow: inset 0px 0px 0px 3px var(--color-hero-error);
+  }
+
+  .hero-form-input::placeholder {
+    color: color-mix(in srgb, var(--color-hero-error) 50%, transparent);
+  }
+
+  .hero-form-input-error {
+    display: block;
+  }
+}
+
+.hero-form-submit-btn {
+  padding: 16px;
+  border-radius: 5px;
+
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+.statistics {
+  padding: 160px 24px 80px;
+  width: 100%;
+  background-color: var(--color-statistics-bg);
+}
